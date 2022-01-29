@@ -1,5 +1,20 @@
+#include <iostream>
+#include <string>
+#include <filesystem>
+
+
+// @args :: <pattern> <file_name>
 int main(int argc, char **argv)
 {
-    // code to get arguments :: File Name , Pattern
-    auto regexObject = ("file_name", "pattern");
+    if ( argc != 3 ) {
+	    std::cout  << "USAGE :: <executable> <pattern> <file_name>" << std::endl;
+    }
+    
+    std::string regexPattern = argv[1];
+    std::string fileName = argv[2];
+    // now going to check if the mentioned file exists as that path or not
+    
+    if (!std::filesystem::exists(fileName))
+        std::cout << "ERROR : File" << fileName << "Not Found" << std::endl;
+    
 }
