@@ -16,5 +16,10 @@ int main(int argc, char **argv)
     
     if (!std::filesystem::exists(fileName))
         std::cout << "ERROR : File" << fileName << "Not Found" << std::endl;
+
+    std::cout << "Regex Pattern : " << regexPattern << std::endl;
+    std::cout << "File Name : " << fileName << std::endl;
+
+    return 0;
     
 }
